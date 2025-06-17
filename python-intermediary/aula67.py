@@ -49,18 +49,24 @@ while not sair:
     if digitou == 'sair':
         sair = True
         print("Saindo.")
+        continue
     elif digitou in comandos:
         if digitou == "listar":
             comandos[digitou](tarefas)
+            continue
         elif digitou == "desfazer":
             comandos[digitou](tarefas, tarefas_desfeitas)
+            continue
         elif digitou == "refazer":
             comandos[digitou](tarefas, tarefas_desfeitas)
+            continue
     elif digitou == "":
         print("Informe uma tarefa ou um comando.")
+        continue
     else:
         tarefas.append(digitou)
         listar(tarefas)
+        continue
 
 print("Fim.")
 
