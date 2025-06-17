@@ -1,3 +1,4 @@
+import os
 # Criando arquivos com Python
 # Usamos a funçao open parar abrir
 # um arquivo em Python (ele pode ou não existir)
@@ -58,3 +59,11 @@ with open(caminho_arquivo, 'r') as arquivo:
     print(arquivo.read())
     print('Seu arquivo será fechado.\n')
   
+with open(caminho_arquivo, 'a') as arquivo:
+    arquivo.write('Agora eu consigo escrever sem apagar o que estava antes....\n')
+    arquivo.write('Mais linhas no arquivo...\n')
+
+# os.unlink(caminho_arquivo)
+# os.remove(caminho_arquivo)
+os.rename(caminho_arquivo, 'aula64-renomeado.txt')
+    
